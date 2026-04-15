@@ -1,0 +1,50 @@
+[
+  {
+    "title": "The Art of Shipping: Lessons from Two Years of Solo Building",
+    "date": "12 Apr, 2026",
+    "readTime": 11,
+    "url": "/posts/2026/the-art-of-shipping"
+  },
+  {
+    "title": "LLMs as Pair Programmers: What Actually Works",
+    "date": "28 Feb, 2026",
+    "readTime": 9,
+    "url": "/posts/2026/llms-as-pair-programmers"
+  },
+  {
+    "title": "System Design for Indie Developers: Skip the Ceremony",
+    "date": "19 Dec, 2025",
+    "readTime": 15,
+    "url": "/posts/2025/system-design-for-indie-devs"
+  },
+  {
+    "title": "Why I Rewrote My Side Project Three Times",
+    "date": "3 Nov, 2025",
+    "readTime": 7,
+    "url": "/posts/2025/why-i-rewrote"
+  },
+  {
+    "title": "TypeScript Tips I Wish I Knew When Starting Out",
+    "date": "14 Sep, 2025",
+    "readTime": 6,
+    "url": "/posts/2025/typescript-tips"
+  },
+  {
+    "title": "Open Source Sustainability: A Developer's Honest Take",
+    "date": "22 Aug, 2025",
+    "readTime": 5,
+    "url": "/posts/2025/open-source"
+  },
+  {
+    "title": "Building in Public: Six Months of Uncomfortable Transparency",
+    "date": "5 Jul, 2025",
+    "readTime": 8,
+    "url": "/posts/2025/building-in-public"
+  },
+  {
+    "title": "Learning Rust as a JavaScript Developer: A Survival Guide",
+    "date": "18 May, 2025",
+    "readTime": 14,
+    "url": "/posts/2025/rust-from-js"
+  }
+]
