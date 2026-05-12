@@ -162,6 +162,16 @@
       border: none; border-top: 1px solid var(--border); margin: 8px 0;
     }
 
+    .post-body .highlight {
+      background: var(--surface);
+      border-left: 3px solid var(--text);
+      padding: 16px 20px;
+      border-radius: 0 6px 6px 0;
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--text);
+    }
+
     /* ── Footer nav between posts ── */
     .post-footer {
       margin-top: 80px; padding-top: 32px;
@@ -239,6 +249,7 @@
     if (b.type === 'h2') return `<h2>${b.text}</h2>`;
     if (b.type === 'h3') return `<h3>${b.text}</h3>`;
     if (b.type === 'blockquote') return `<blockquote>${b.text}</blockquote>`;
+    if (b.type === 'highlight') return `<p class="highlight">${b.text}</p>`;
     if (b.type === 'hr') return `<hr>`;
     return `<p>${b.text}</p>`;
   }
