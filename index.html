@@ -10,7 +10,6 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* Light */
     :root, [data-theme="light"] {
       --bg: #faf9f7; --surface: #f3f1ed;
       --text: #1a1916; --muted: #6b6860; --subtle: #a09d97;
@@ -18,13 +17,11 @@
       --serif: 'Instrument Serif', Georgia, serif;
       --mono: 'DM Mono', monospace; --sans: 'Geist', sans-serif;
     }
-    /* Dark */
     [data-theme="dark"] {
       --bg: #111110; --surface: #1a1916;
       --text: #e8e4dc; --muted: #908d86; --subtle: #5c5a55;
       --link: #7fb3e8; --border: rgba(232,228,220,0.1);
     }
-    /* Auto follows OS */
     @media (prefers-color-scheme: dark) {
       [data-theme="auto"] {
         --bg: #111110; --surface: #1a1916;
@@ -138,8 +135,10 @@
       font-family: var(--mono); font-size: 12px; color: var(--subtle);
     }
     .post-meta-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--subtle); display: inline-block; }
-
-    .posts-status { padding: 32px 0; font-family: var(--mono); font-size: 13px; color: var(--subtle); }
+    .post-excerpt {
+      margin-top: 8px; font-size: 14px; color: var(--muted);
+      line-height: 1.6; max-width: 560px;
+    }
 
     .all-posts {
       display: inline-flex; align-items: center; gap: 8px;
@@ -206,8 +205,8 @@
     </div>
 
     <p class="hero-desc">
-      Building thoughtful software from first principles.<br />
-      Every line of code lives on GitHub — fork it, remix it, make it yours.
+      Writing about life, code, and the quiet struggle of building things that matter.<br />
+      Based in Delhi. Father of Madhav.
     </p>
 
     <div class="social-links">
@@ -236,10 +235,7 @@
 
   <hr />
 
-  <!-- Populated from posts.json -->
-  <ul class="post-list" id="postList">
-    <p class="posts-status">Loading posts…</p>
-  </ul>
+  <ul class="post-list" id="postList"></ul>
 
   <a href="/posts/" class="all-posts">All Posts →</a>
 </main>
@@ -281,7 +277,6 @@
     if (theme === 'light') return false;
     return matchMedia('(prefers-color-scheme: dark)').matches;
   }
-
   function applyTheme(theme) {
     html.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
@@ -289,55 +284,42 @@
     icon.textContent = dark ? '☀' : '☾';
     btn.title = dark ? 'Switch to light' : 'Switch to dark';
   }
-
   btn.addEventListener('click', () => {
     const current = html.getAttribute('data-theme');
     applyTheme(isDarkActive(current) ? 'light' : 'dark');
   });
-
   applyTheme(localStorage.getItem('theme') || 'auto');
 
-  /* ── Posts from posts.json ── */
-  function renderPosts(posts) {
-    return posts.map(p => `
-      <li class="post-item">
-        <a href="${p.url}" class="post-link">
-          <div class="post-header">
-            <h2 class="post-title">${p.title}</h2>
-            <span class="post-arrow">→</span>
-          </div>
-          <div class="post-meta">
-            <span>${p.date}</span>
-            <span class="post-meta-dot"></span>
-            <span>${p.readTime} min read</span>
-          </div>
-        </a>
-      </li>`).join('');
-  }
+  /* ── Posts — embedded directly, no fetch needed ──
+     To add a new post: copy one object, paste at the top, fill in your details.
+     This works when opening the file locally AND when hosted on a server.
+  ── */
+  const POSTS = [
+    {
+      title: "Three Lives, One Quiet Struggle",
+      date: "11 May, 2026",
+      readTime: 6,
+      url: "post.html?slug=three-lives-one-quiet-struggle",
+      excerpt: "Many things perceived about me don't match the reality I live in. This is an honest record of that reality — family tensions, caring for Madhav, financial strain, and what survival actually looks like from the inside."
+    },
 
-  const FALLBACK = [
-    { title: "The Art of Shipping: Lessons from Two Years of Solo Building", date: "12 Apr, 2026", readTime: 11, url: "/posts/2026/the-art-of-shipping" },
-    { title: "LLMs as Pair Programmers: What Actually Works", date: "28 Feb, 2026", readTime: 9, url: "/posts/2026/llms-as-pair-programmers" },
-    { title: "System Design for Indie Developers: Skip the Ceremony", date: "19 Dec, 2025", readTime: 15, url: "/posts/2025/system-design-for-indie-devs" },
-    { title: "Why I Rewrote My Side Project Three Times", date: "3 Nov, 2025", readTime: 7, url: "/posts/2025/why-i-rewrote" },
-    { title: "TypeScript Tips I Wish I Knew When Starting Out", date: "14 Sep, 2025", readTime: 6, url: "/posts/2025/typescript-tips" },
-    { title: "Open Source Sustainability: A Developer's Honest Take", date: "22 Aug, 2025", readTime: 5, url: "/posts/2025/open-source" },
-    { title: "Building in Public: Six Months of Uncomfortable Transparency", date: "5 Jul, 2025", readTime: 8, url: "/posts/2025/building-in-public" },
-    { title: "Learning Rust as a JavaScript Developer: A Survival Guide", date: "18 May, 2025", readTime: 14, url: "/posts/2025/rust-from-js" }
   ];
 
-  async function loadPosts() {
-    const list = document.getElementById('postList');
-    try {
-      const res = await fetch('posts.json');
-      if (!res.ok) throw new Error();
-      const posts = await res.json();
-      list.innerHTML = posts.length ? renderPosts(posts) : '<p class="posts-status">No posts yet.</p>';
-    } catch {
-      list.innerHTML = renderPosts(FALLBACK);
-    }
-  }
-  loadPosts();
+  document.getElementById('postList').innerHTML = POSTS.map(p => `
+    <li class="post-item">
+      <a href="${p.url}" class="post-link">
+        <div class="post-header">
+          <h2 class="post-title">${p.title}</h2>
+          <span class="post-arrow">→</span>
+        </div>
+        <div class="post-meta">
+          <span>${p.date}</span>
+          <span class="post-meta-dot"></span>
+          <span>${p.readTime} min read</span>
+        </div>
+        ${p.excerpt ? `<p class="post-excerpt">${p.excerpt}</p>` : ''}
+      </a>
+    </li>`).join('');
 </script>
 </body>
 </html>

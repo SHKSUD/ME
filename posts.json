@@ -1,50 +1,112 @@
 [
   {
+    "title": "Three Lives, One Quiet Struggle",
+    "date": "11 May, 2026",
+    "readTime": 6,
+    "url": "/posts/2026/three-lives-one-quiet-struggle",
+    "excerpt": "Many things perceived about me don't match the reality I live in. This is an honest record of that reality — family tensions, caring for Madhav, financial strain, and what survival actually looks like from the inside.",
+    "content": [
+      { "type": "p", "text": "Many things perceived about me don't match the reality I live in. Most people, without knowing the full picture, go by what comes easily to them — the mind economises. What looks obvious from the outside is often the smallest part of the truth." },
+      { "type": "h2", "text": "The assumptions people carry" },
+      { "type": "p", "text": "One common assumption is that because my wife is a single daughter, I benefit immensely from that status. The opposite is true. She and her father are constantly at odds. No matter how much I try, the tension always lingers. The house she might have been expected to inherit is earned property — her father is free to give it to whomever he chooses. I foresee legal complications ahead, with several people already trying to take advantage of the disagreement and his old age." },
+      { "type": "h2", "text": "Madhav" },
+      { "type": "p", "text": "People around me also have opinions about my son, Madhav. Most do not know he is a bit different — never clinically diagnosed, never boxed into a neat bracket. He has unique abilities, but he needs the constant presence of his mother or me. One of us must always stay close." },
+      { "type": "p", "text": "The school wanted to categorise him as 'special,' something we have had to fight against continuously. He struggles with communication and writing, though he is slowly catching up. Caring for him this way, without much outside support, has forced us to reshape our lives: limited income, limited expenditure, hard choices about careers." },
+      { "type": "p", "text": "The one steady thing we looked forward to was school. That rhythm has also stopped because of pending fees. He has not been promoted. That is how the system often works — capital begets capital." },
+      { "type": "h2", "text": "Why Delhi" },
+      { "type": "p", "text": "I don't live in this city by choice. The cost of shifting is high, and the uncertainty about which city would be right for Madhav — or would give me consistent work — has kept us here. Cut off from families on both sides, the three of us mostly live in isolation, with limited interaction with the outer world, just enough to know it still exists." },
+      { "type": "h2", "text": "What difficult times have taught me" },
+      { "type": "p", "text": "First: asking for help — especially financial help — is the hardest ask. It feels heavier than any other request." },
+      { "type": "p", "text": "Second: having many doctors in the family means nothing without insurance. I don't have one at present." },
+      { "type": "p", "text": "Third: the mind often pushes you toward the pit more than the pit drags you in. You survive anyway — but reputation, credibility, peace, harmony — those go quietly." },
+      { "type": "p", "text": "I've also noticed a pattern: when one thing breaks, everything else seems to follow." },
+      { "type": "h2", "text": "The circle of survival" },
+      { "type": "p", "text": "Writers — commercial and copy — are among the first casualties of LLM models, which has narrowed the work available to people like me. Career opportunities have dwindled as the years have passed." },
+      { "type": "p", "text": "Still, I think constantly about the future and about breaking out of survival mode. What it feels like is this: we need one small, unexpected opening — a thrust from outside that turns a direction into momentum." },
+      { "type": "p", "text": "Until that arrives, I live inside the circle." },
+      { "type": "p", "text": "This note collects a few truths behind the common assumptions about my life. Its purpose is straightforward: to record my present reality honestly, to correct misconceptions, and to invite understanding rather than judgment." }
+    ]
+  },
+  {
     "title": "The Art of Shipping: Lessons from Two Years of Solo Building",
     "date": "12 Apr, 2026",
     "readTime": 11,
-    "url": "/posts/2026/the-art-of-shipping"
+    "url": "/posts/2026/the-art-of-shipping",
+    "excerpt": "Two years ago I quit my job to build in public. Here's what I wish someone had told me before I shipped my first thing.",
+    "content": [
+      { "type": "p", "text": "Shipping is not a skill you read about. It's a muscle you tear and rebuild, over and over, until the discomfort of putting something out stops feeling like danger and starts feeling like Tuesday." },
+      { "type": "p", "text": "Two years ago I quit my job to build in public. I had three side projects gathering dust in private repos, a notes app I'd rewritten four times, and a habit of declaring things \"not ready yet\" indefinitely. I told myself I was being careful. I was being scared." },
+      { "type": "h2", "text": "The first ship is the hardest" },
+      { "type": "p", "text": "My first public release had eleven users — nine of whom were me testing on different devices. The other two never came back. And yet something changed after that deploy. The work became real. It had a URL. Someone could, in theory, find it." },
+      { "type": "p", "text": "That feeling — of something existing in the world rather than on your hard drive — is what I'd been avoiding. It's also what makes you better." },
+      { "type": "h2", "text": "Done beats perfect, but done still means done" },
+      { "type": "p", "text": "\"Ship fast\" is misread as \"ship broken.\" What it actually means is: find the smallest thing that's genuinely complete, and release that. Not a skeleton. Not a stub with a waitlist. Something a person can pick up and use right now, even if it only does one thing." },
+      { "type": "p", "text": "The two years taught me to ask one question before every release: if this was the only thing I ever shipped, would I be okay with it existing? If yes, it goes out. If no, I cut scope until yes." },
+      { "type": "h2", "text": "The feedback you don't get is the most useful" },
+      { "type": "p", "text": "People who don't bother to tell you something is confusing — they just leave — are your most honest reviewers. Watch your analytics with the same attention you'd give a user sitting next to you. Where do they stop? That's your next fix." },
+      { "type": "p", "text": "I started keeping a doc called \"things nobody said but the numbers showed.\" It's now longer than any post I've written." },
+      { "type": "h2", "text": "The projects you abandon teach more than the ones you finish" },
+      { "type": "p", "text": "I killed four projects in two years. Each one taught me something the survivors couldn't. A billing integration I abandoned after a week showed me I was building for a customer who didn't exist. A CLI tool I spent three months on — and then quietly let expire — showed me I was more interested in the architecture than the problem." },
+      { "type": "p", "text": "Knowing when to stop is as learnable as knowing when to ship. Both require you to be honest about what the thing is actually for." },
+      { "type": "h2", "text": "What I'd tell myself on day one" },
+      { "type": "p", "text": "Put it out. Not tomorrow. Before you've written the landing page copy. Before the logo is right. Before you've decided on the pricing. Put it out, watch what happens, and let that be your next task list." },
+      { "type": "p", "text": "The version you're protecting in your head is not better than the one users will improve by using it. It's just imaginary." }
+    ]
   },
   {
     "title": "LLMs as Pair Programmers: What Actually Works",
     "date": "28 Feb, 2026",
     "readTime": 9,
-    "url": "/posts/2026/llms-as-pair-programmers"
+    "url": "/posts/2026/llms-as-pair-programmers",
+    "excerpt": "After a year of using LLMs daily in my workflow, here's what actually moves the needle and what's just hype.",
+    "content": []
   },
   {
     "title": "System Design for Indie Developers: Skip the Ceremony",
     "date": "19 Dec, 2025",
     "readTime": 15,
-    "url": "/posts/2025/system-design-for-indie-devs"
+    "url": "/posts/2025/system-design-for-indie-devs",
+    "excerpt": "Enterprise system design patterns were built for teams of 50. Here's what actually applies when you're a team of one.",
+    "content": []
   },
   {
     "title": "Why I Rewrote My Side Project Three Times",
     "date": "3 Nov, 2025",
     "readTime": 7,
-    "url": "/posts/2025/why-i-rewrote"
+    "url": "/posts/2025/why-i-rewrote",
+    "excerpt": "The first rewrite was ignorance. The second was stubbornness. The third finally taught me something.",
+    "content": []
   },
   {
     "title": "TypeScript Tips I Wish I Knew When Starting Out",
     "date": "14 Sep, 2025",
     "readTime": 6,
-    "url": "/posts/2025/typescript-tips"
+    "url": "/posts/2025/typescript-tips",
+    "excerpt": "Practical patterns for TypeScript that took me way too long to figure out on my own.",
+    "content": []
   },
   {
     "title": "Open Source Sustainability: A Developer's Honest Take",
     "date": "22 Aug, 2025",
     "readTime": 5,
-    "url": "/posts/2025/open-source"
+    "url": "/posts/2025/open-source",
+    "excerpt": "Maintaining open source for free is noble until it isn't. Here's where I drew my line.",
+    "content": []
   },
   {
     "title": "Building in Public: Six Months of Uncomfortable Transparency",
     "date": "5 Jul, 2025",
     "readTime": 8,
-    "url": "/posts/2025/building-in-public"
+    "url": "/posts/2025/building-in-public",
+    "excerpt": "I tweeted every milestone, every failure, and every pivot for six months. Here's what it cost and what it gave back.",
+    "content": []
   },
   {
     "title": "Learning Rust as a JavaScript Developer: A Survival Guide",
     "date": "18 May, 2025",
     "readTime": 14,
-    "url": "/posts/2025/rust-from-js"
+    "url": "/posts/2025/rust-from-js",
+    "excerpt": "Rust doesn't fight you — it just refuses to let you be lazy. Coming from JS, that's a bigger adjustment than the syntax.",
+    "content": []
   }
 ]

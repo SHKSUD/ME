@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading… — Sudhanshu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Geist:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root, [data-theme="light"] {
+      --bg: #faf9f7; --surface: #f3f1ed;
+      --text: #1a1916; --muted: #6b6860; --subtle: #a09d97;
+      --link: #2d5a8e; --border: rgba(26,25,22,0.1);
+      --serif: 'Instrument Serif', Georgia, serif;
+      --mono: 'DM Mono', monospace; --sans: 'Geist', sans-serif;
+    }
+    [data-theme="dark"] {
+      --bg: #111110; --surface: #1a1916;
+      --text: #e8e4dc; --muted: #908d86; --subtle: #5c5a55;
+      --link: #7fb3e8; --border: rgba(232,228,220,0.1);
+    }
+    @media (prefers-color-scheme: dark) {
+      [data-theme="auto"] {
+        --bg: #111110; --surface: #1a1916;
+        --text: #e8e4dc; --muted: #908d86; --subtle: #5c5a55;
+        --link: #7fb3e8; --border: rgba(232,228,220,0.1);
+      }
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans); background: var(--bg); color: var(--text);
+      line-height: 1.75; min-height: 100vh;
+      transition: background .2s, color .2s;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky; top: 0; z-index: 50;
+      background: var(--bg); border-bottom: 1px solid var(--border);
+      padding: 0 max(24px, calc((100vw - 700px) / 2));
+      display: flex; align-items: center; justify-content: space-between;
+      height: 56px; transition: background .2s, border-color .2s;
+    }
+    .nav-logo {
+      font-family: var(--serif); font-size: 18px;
+      color: var(--text); text-decoration: none; letter-spacing: -0.01em;
+    }
+    .nav-right { display: flex; align-items: center; gap: 4px; }
+    .nav-links { display: flex; gap: 4px; list-style: none; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none; font-size: 14px;
+      padding: 6px 10px; border-radius: 6px; transition: color .15s, background .15s;
+    }
+    .nav-links a:hover { color: var(--text); background: var(--surface); }
+    .theme-toggle {
+      width: 32px; height: 32px; border: 1px solid var(--border); border-radius: 8px;
+      background: transparent; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; color: var(--muted);
+      transition: color .15s, background .15s, border-color .15s; margin-left: 6px;
+    }
+    .theme-toggle:hover { background: var(--surface); color: var(--text); border-color: var(--subtle); }
+    .theme-toggle:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+
+    /* ── Article layout ── */
+    main {
+      max-width: 700px; margin: 0 auto;
+      padding: 64px 24px 120px;
+    }
+
+    /* Back link */
+    .back-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: var(--mono); font-size: 13px; color: var(--subtle);
+      text-decoration: none; margin-bottom: 48px;
+      transition: color .15s;
+    }
+    .back-link:hover { color: var(--muted); }
+
+    /* Post header */
+    .post-header { margin-bottom: 48px; }
+    .post-title {
+      font-family: var(--serif);
+      font-size: clamp(26px, 5vw, 40px);
+      line-height: 1.15; letter-spacing: -0.02em; font-weight: 400;
+      margin-bottom: 20px;
+    }
+    .post-meta {
+      display: flex; align-items: center; gap: 12px;
+      font-family: var(--mono); font-size: 12px; color: var(--subtle);
+    }
+    .post-meta-dot {
+      width: 3px; height: 3px; border-radius: 50%;
+      background: var(--subtle); display: inline-block;
+    }
+    .post-excerpt {
+      margin-top: 20px; padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 17px; color: var(--muted);
+      line-height: 1.7; font-style: italic;
+      font-family: var(--serif);
+    }
+
+    /* Divider */
+    .post-divider {
+      border: none; border-top: 1px solid var(--border);
+      margin: 0 0 48px;
+    }
+
+    /* ── Article body ── */
+    .post-body { display: flex; flex-direction: column; gap: 24px; }
+
+    .post-body p {
+      font-size: 17px;
+      line-height: 1.85;
+      color: var(--text);
+    }
+
+    .post-body h2 {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-top: 16px;
+    }
+
+    .post-body h3 {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--muted);
+    }
+
+    .post-body blockquote {
+      border-left: 3px solid var(--border);
+      padding-left: 20px;
+      color: var(--muted);
+      font-style: italic;
+      font-family: var(--serif);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .post-body ul, .post-body ol {
+      padding-left: 24px;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .post-body li { font-size: 17px; line-height: 1.75; color: var(--text); }
+
+    .post-body code {
+      font-family: var(--mono); font-size: 14px;
+      background: var(--surface); padding: 2px 6px; border-radius: 4px;
+      color: var(--text);
+    }
+
+    .post-body hr {
+      border: none; border-top: 1px solid var(--border); margin: 8px 0;
+    }
+
+    /* ── Footer nav between posts ── */
+    .post-footer {
+      margin-top: 80px; padding-top: 32px;
+      border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 16px; flex-wrap: wrap;
+    }
+    .post-footer a {
+      font-family: var(--mono); font-size: 13px; color: var(--link);
+      text-decoration: none; border-bottom: 1px solid transparent;
+      transition: border-color .15s;
+    }
+    .post-footer a:hover { border-bottom-color: var(--link); }
+
+    /* Not found */
+    .not-found {
+      padding: 80px 0; text-align: center;
+      font-family: var(--mono); font-size: 14px; color: var(--subtle);
+    }
+    .not-found strong { display: block; font-size: 48px; margin-bottom: 16px; color: var(--border); }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 16px; }
+      main { padding: 40px 16px 80px; }
+      .post-title { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Sudhanshu</a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="index.html">Posts</a></li>
+      <li><a href="index.html#about">About</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span id="themeIcon">☀</span>
+    </button>
+  </div>
+</nav>
+
+<main id="main-content">
+  <div id="articleRoot"></div>
+</main>
+
+<script>
+  /* ── Theme ── */
+  const html = document.documentElement;
+  const btn  = document.getElementById('themeToggle');
+  const icon = document.getElementById('themeIcon');
+  function isDarkActive(t) {
+    if (t === 'dark') return true;
+    if (t === 'light') return false;
+    return matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  function applyTheme(t) {
+    html.setAttribute('data-theme', t);
+    localStorage.setItem('theme', t);
+    const dark = isDarkActive(t);
+    icon.textContent = dark ? '☀' : '☾';
+    btn.title = dark ? 'Switch to light' : 'Switch to dark';
+  }
+  btn.addEventListener('click', () => {
+    applyTheme(isDarkActive(html.getAttribute('data-theme')) ? 'light' : 'dark');
+  });
+  applyTheme(localStorage.getItem('theme') || 'auto');
+
+  /* ── Load post from posts.json ── */
+  const slug = new URLSearchParams(location.search).get('slug');
+  const root = document.getElementById('articleRoot');
+
+  function renderBlock(b) {
+    if (b.type === 'h2') return `<h2>${b.text}</h2>`;
+    if (b.type === 'h3') return `<h3>${b.text}</h3>`;
+    if (b.type === 'blockquote') return `<blockquote>${b.text}</blockquote>`;
+    if (b.type === 'hr') return `<hr>`;
+    return `<p>${b.text}</p>`;
+  }
+
+  function renderPost(post, prev, next) {
+    document.title = `${post.title} — Sudhanshu`;
+    root.innerHTML = `
+      <a href="index.html" class="back-link">← All Posts</a>
+      <header class="post-header">
+        <h1 class="post-title">${post.title}</h1>
+        <div class="post-meta">
+          <span>${post.date}</span>
+          <span class="post-meta-dot"></span>
+          <span>${post.readTime} min read</span>
+        </div>
+        ${post.excerpt ? `<p class="post-excerpt">${post.excerpt}</p>` : ''}
+      </header>
+      <hr class="post-divider" />
+      <article class="post-body">
+        ${post.content.map(renderBlock).join('\n')}
+      </article>
+      <nav class="post-footer">
+        ${prev ? `<a href="post.html?slug=${prev.slug}">← ${prev.title}</a>` : '<span></span>'}
+        ${next ? `<a href="post.html?slug=${next.slug}">${next.title} →</a>` : '<span></span>'}
+      </nav>`;
+  }
+
+  function showNotFound() {
+    document.title = 'Post not found — Sudhanshu';
+    root.innerHTML = `
+      <div class="not-found">
+        <strong>404</strong>
+        Post not found.
+        <br><br>
+        <a href="index.html" style="color:var(--link);font-family:var(--mono);font-size:13px;">← Back to all posts</a>
+      </div>`;
+  }
+
+  fetch('posts.json')
+    .then(r => { if (!r.ok) throw new Error(); return r.json(); })
+    .then(posts => {
+      const idx  = posts.findIndex(p => p.slug === slug);
+      const post = posts[idx];
+      if (!post) return showNotFound();
+      renderPost(post, posts[idx + 1] || null, posts[idx - 1] || null);
+    })
+    .catch(showNotFound);
+</script>
+</body>
+</html>
