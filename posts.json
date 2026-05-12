@@ -8,26 +8,32 @@
     "excerpt": "Many things perceived about me don't match the reality I live in. This is an honest record of that reality — family tensions, caring for Madhav, financial strain, and what survival actually looks like from the inside.",
     "content": [
       { "type": "p", "text": "Many things perceived about me don't match the reality I live in. Most people, without knowing the full picture, go by what comes easily to them — mind economises. What looks obvious from the outside is often the smallest part of the truth." },
+
+      { "type": "h2", "text": "The single daughter assumption" },
       { "type": "p", "text": "One such common assumption is that because my wife is a single daughter, I benefit immensely from that status. Whereas the truth is the opposite. As a matter of fact, it proved to be counterproductive in many ways." },
       { "type": "p", "text": "She and her father are constantly at odds and never get along. No matter how much I try, the tension always lingers. I won't go into the long story here, but the strain is real." },
       { "type": "p", "text": "Another common assumption is that she is the default inheritor of her parental home. That is not true either. The house is effectively \"earned property,\" and her father is free to give it to whomever he chooses. I foresee legal hassles or a split in the future — many players are actually trying to take advantage of the situation, the disagreement and old age." },
+
+      { "type": "h2", "text": "Madhav" },
       { "type": "p", "text": "People around me also have opinions about my son, Madhav. Most do not know he is a bit different and has never been clinically diagnosed or boxed into any neat bracket. He has unique abilities, but he needs the constant presence of his mother or me. One of us must always stay close to him." },
       { "type": "p", "text": "The school even wanted to categorise him as \"special,\" something we have had to fight against continuously. He struggles with communication and writing, though he is slowly catching up." },
       { "type": "p", "text": "Caring for Madhav in this way and managing without much support has forced us to adjust our lives: limited income, limited expenditure. We had to make hard choices about our careers. Our earnings have always been just enough to survive, often with great difficulty." },
+
+      { "type": "h2", "text": "Career and the city" },
       { "type": "p", "text": "Over time, our career opportunities have dwindled. Writers — commercial content writers and copywriters — are among the first casualties by LLM models like GPT, which has narrowed demand in some areas." },
       { "type": "p", "text": "Then the question naturally arises: why live in this capital city? I don't live in Delhi by choice. The reasons I can think of are the high cost of shifting and the uncertainty about which city would be appropriate for Madhav or would give me consistent earnings and new possibilities. I rest more on the cost factor." },
       { "type": "p", "text": "Cut off from families on both sides, the three of us — my wife, my son, and I — mostly live in isolation. Living in constant fear, we have limited interaction with the outer world, just enough to feel it exists. People have become more intrusive." },
       { "type": "p", "text": "The one steady thing we looked forward to was school; that rhythm has also stopped because of pending fees, and he has not been promoted." },
       { "type": "p", "text": "That is how the system often works. Capital begets capital — those with networks and credibility have options others do not." },
+
       { "type": "h2", "text": "In difficult times, three things I've come to realise." },
       { "type": "p", "text": "First, asking for help — especially financial help — is the hardest ask. It feels heavier." },
       { "type": "p", "text": "Second, having many doctors in the family doesn't help if one doesn't have insurance. I don't have one at present, can't afford any more." },
       { "type": "p", "text": "Third, the mind often pushes you toward the pit more than the pit drags you in." },
       { "type": "p", "text": "You survive anyway; other things — reputation, credibility, peace of mind or harmony in the house — go for a toss." },
-      { "type": "p", "text": "I've also noticed a thumb rule: when one thing breaks, everything else seems to follow." },
+      { "type": "highlight", "text": "I've also noticed a thumb rule: when one thing breaks, everything else seems to follow." },
       { "type": "p", "text": "Still, I think constantly about the future and about breaking free from the survival mode of the middle class. What it often feels like is this: we need one miracle, one thrust from outside — a small, unexpected opening that turns a direction into momentum." },
-      { "type": "p", "text": "Until the thrust arrives, I live inside the circle of survival." },
-      { "type": "p", "text": "This note collects a few truths behind the common assumptions about my life — family tensions and inheritance, caring for Madhav and his schooling, financial and career struggles, health and isolation. Its purpose is straightforward: to record my present reality honestly, to correct misconceptions, and to invite understanding rather than judgment." }
+      { "type": "p", "text": "Until the thrust arrives, I live inside the circle of survival." }
     ]
   }
 ]
